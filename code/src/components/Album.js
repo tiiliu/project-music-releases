@@ -6,7 +6,7 @@ import Artist from "components/Artist";
 
 export const Album = (props) => {
   return (
-    <article className="album-card">
+    <section className="album-card">
       <div className="image-group">
         <img
           className="album-cover"
@@ -29,6 +29,6 @@ export const Album = (props) => {
           return <Artist artist={artist} />;
         })}
       </div>
-    </article>
+    </section>
   );
 };

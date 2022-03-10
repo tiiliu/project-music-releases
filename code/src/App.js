@@ -7,11 +7,13 @@ import Header from "components/Header";
 
 export const App = () => {
   return (
-    <section className="albums-container">
+    <section className="App">
       <Header />
-      {data.albums.items.map((album) => {
-        return <Album album={album} />;
-      })}
+      <section className="main-container">
+        {data.albums.items.map((album) => {
+          return <Album album={album} />;
+        })}
+      </section>
     </section>
   );
 };
