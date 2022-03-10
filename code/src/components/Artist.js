@@ -1,5 +1,17 @@
-// import React from "react";
+import React from "react";
 
-// export const Artist = () => {
-//   return;
-// };
+export const Artist = (props) => {
+  return (
+    <div>
+        <a
+        className="artist-link"
+        href={props.artist.external_urls.spotify}
+        target="-blank"
+        >
+        <h3 className="artist-name">{props.artist.name}</h3>
+    </a>
+  </div>
+  )
+};
+
+export default Artist 
