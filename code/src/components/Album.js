@@ -13,6 +13,7 @@ export const Album = (props) => {
           src={props.album.images[1].url}
           alt="album cover"
         />
+        <div className="image-overlay"></div>
         <Icons />
       </div>
       <div className="album-text-group">
