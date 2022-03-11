@@ -10,7 +10,6 @@ export const Artist = (props) => {
         rel="noopener noreferrer"
       >
         {props.artist.name}
-        {/* <h3 className="artist-name">{props.artist.name}</h3> */}
       </a>
     </div>
   );

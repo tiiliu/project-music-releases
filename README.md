@@ -1,11 +1,11 @@
 # Music Releases
-Replace this readme with your own information about your project.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week we started working with React. We created components by using data from Spotify to show new album and single releases. The project was done by working in pairs.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started the project by planning the layout and structure of components on Figma. Then we created the components for different sections and used map() function to render the data to all the elements when mounting them.
+With more time we would create additional components to show more data.
 
 ## View it live
 

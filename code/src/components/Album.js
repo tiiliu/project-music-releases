@@ -2,8 +2,6 @@ import React from "react";
 
 import Icons from "components/Icons";
 
-import Artist from "components/Artist";
-
 export const Album = (props) => {
   return (
     <section className="album-card">
@@ -17,6 +15,7 @@ export const Album = (props) => {
         <div className="image-overlay"></div>
         <Icons album={props.album} />
       </div>
+
       <div className="text-container">
         <div className="album-text-group">
           <a
@@ -28,9 +27,41 @@ export const Album = (props) => {
             <h2 className="album-name">{props.album.name}</h2>
           </a>
         </div>
+
         <div className="artist-text-group">
-          {props.album.artists.map((artist) => {
-            return <Artist key={artist.id} artist={artist} />;
+          {props.album.artists.map((artist, index) => {
+            if (props.album.artists.length === 1) {
+              return (
+                <div className="artist-container">
+                  <a
+                    className="artist-link"
+                    href={artist.external_urls.spotify}
+                    target="-blank"
+                    rel="noopener noreferrer"
+                  >
+                    {artist.name}
+                  </a>
+                </div>
+              );
+            } else {
+              return (
+                <div className="artist-container">
+                  <a
+                    className="artist-link"
+                    href={artist.external_urls.spotify}
+                    target="-blank"
+                    rel="noopener noreferrer"
+                  >
+                    {artist.name}{" "}
+                    {index < props.album.artists.length - 2
+                      ? ", "
+                      : index < props.album.artists.length - 1
+                      ? "& "
+                      : ""}
+                  </a>
+                </div>
+              );
+            }
           })}
         </div>
       </div>

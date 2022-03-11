@@ -10,7 +10,7 @@ const Icons = (props) => {
   return (
     <div className="icon-wrapper">
       <div className="icon-container">
-        <img className="heart-icon" src={heart} alt="heart icon" />
+        <img className="icons" src={heart} alt="heart icon" />
       </div>
       <div className="icon-container">
         <a
@@ -23,7 +23,7 @@ const Icons = (props) => {
         </a>
       </div>
       <div className="icon-container">
-        <img className="dots-icon" src={dots} alt="dots icon" />
+        <img className="icons" src={dots} alt="dots icon" />
       </div>
     </div>
   );
