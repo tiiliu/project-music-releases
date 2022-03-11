@@ -29,51 +29,46 @@ a:visited {
   text-decoration: none;
 }
 
-.artist-name,
+.artist-link,
 .album-name {
   font-size: 14px;
 }
 
-.artist-name:hover,
+.artist-link:hover,
 .album-name {
   color: #fff;
   margin-bottom: 0;
 }
 
-.artist-name {
+.artist-link {
   color: #a0a0a0;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.artist-name:hover {
+.artist-link:hover {
   color: #fff;
   text-decoration: underline;
-  transform: scale(1.1);
-  transition: 0.3s ease;
 }
 
 .album-name:hover {
   color: #fff;
   text-decoration: underline;
-  transform: scale(1.1);
-  transition: 0.3s ease;
 }
 
-.album-text-group,
-.artist-text-group {
-  width: 95%;
+.artist-container {
+  margin-right: 5px;
 }
 
-/* .artists a:not(:first-og-type, :last-of-type):before {
-  color: #fff;
+.artist-container:not(:last-child)::after {
+  color: #a0a0a0;
   content: ", ";
 }
 
-.artists a:nth-last-of-type(2):after {
-  color: #fff;
-  content: "& "; 
-} */
+.artist-container:nth-last-child(2)::after {
+  color: #a0a0a0;
+  content: " & ";
+}
 
 /*******IMAGES AND ICONS*******/
 
@@ -120,8 +115,10 @@ a:visited {
 
 .album-cover {
   display: block;
-  width: 100%;
-  object-fit: cover;
+  height: 300px;
+  /* width: 100%;
+  height: 100%;
+  object-fit: contain; */
   transition: 0.5s ease-in;
 }
 
@@ -144,15 +141,23 @@ a:visited {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
-  align-items: center;
 }
 
 .album-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* width: 300px; */
+  justify-content: space-between;
+}
+
+.text-container {
+  width: 95%;
+  display: block;
+}
+
+.album-text-group,
+.artist-text-group {
+  width: 95%;
+  display: flex;
 }
 
 /*******MEDIA QUERIES*******/

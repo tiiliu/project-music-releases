@@ -11,7 +11,7 @@ export const App = () => {
       <Header />
       <section className="main-container">
         {data.albums.items.map((album) => {
-          return <Album album={album} />;
+          return <Album key={album.id} album={album} />;
         })}
       </section>
     </section>

@@ -12,23 +12,27 @@ export const Album = (props) => {
           className="album-cover"
           src={props.album.images[1].url}
           alt="album cover"
+          rel="noopener noreferrer"
         />
         <div className="image-overlay"></div>
-        <Icons />
+        <Icons album={props.album} />
       </div>
-      <div className="album-text-group">
-        <a
-          className="album-link"
-          href={props.album.external_urls.spotify}
-          target="-blank"
-        >
-          <h2 className="album-name">{props.album.name}</h2>
-        </a>
-      </div>
-      <div className="artist-text-group">
-        {props.album.artists.map((artist) => {
-          return <Artist artist={artist} />;
-        })}
+      <div className="text-container">
+        <div className="album-text-group">
+          <a
+            className="album-link"
+            href={props.album.external_urls.spotify}
+            target="-blank"
+            rel="noopener noreferrer"
+          >
+            <h2 className="album-name">{props.album.name}</h2>
+          </a>
+        </div>
+        <div className="artist-text-group">
+          {props.album.artists.map((artist) => {
+            return <Artist key={artist.id} artist={artist} />;
+          })}
+        </div>
       </div>
     </section>
   );

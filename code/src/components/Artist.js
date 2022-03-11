@@ -2,13 +2,15 @@ import React from "react";
 
 export const Artist = (props) => {
   return (
-    <div className="artists">
+    <div className="artist-container">
       <a
         className="artist-link"
         href={props.artist.external_urls.spotify}
         target="-blank"
+        rel="noopener noreferrer"
       >
-        <h3 className="artist-name">{props.artist.name}</h3>
+        {props.artist.name}
+        {/* <h3 className="artist-name">{props.artist.name}</h3> */}
       </a>
     </div>
   );
