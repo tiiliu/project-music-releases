@@ -1,6 +1,6 @@
 # Music Releases
 
-This week we started working with React. We created components by using data from Spotify to show new album and single releases. The project was done by working in pairs.
+This week we started working with React. We created components by using data from Spotify to show new album and single releases. The project was done by pair-programming with @Mimmisen.
 
 ## The problem
 
