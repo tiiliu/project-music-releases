@@ -102,6 +102,7 @@ a:visited {
 .play-icon {
   width: 75px;
   opacity: 0.6;
+  filter: invert(100%);
 }
 
 .icons {
